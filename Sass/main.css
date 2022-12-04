@@ -1,0 +1,115 @@
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(100%);
+  }
+  50% {
+    transform: rotate(360deg) scale(130%);
+  }
+  100% {
+    transform: rotate(0deg) scale(100%);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(100%);
+  }
+  50% {
+    transform: rotate(360deg) scale(130%);
+  }
+  100% {
+    transform: rotate(0deg) scale(100%);
+  }
+}
+@-webkit-keyframes color-transition {
+  0% {
+    background-color: rgb(112, 191, 255);
+  }
+  20% {
+    background-color: rgb(114, 112, 255);
+  }
+  40% {
+    background-color: rgb(155, 112, 255);
+  }
+  60% {
+    background-color: rgb(155, 112, 255);
+  }
+  80% {
+    background-color: rgb(114, 112, 255);
+  }
+  100% {
+    background-color: rgb(112, 191, 255);
+  }
+}
+@keyframes color-transition {
+  0% {
+    background-color: rgb(112, 191, 255);
+  }
+  20% {
+    background-color: rgb(114, 112, 255);
+  }
+  40% {
+    background-color: rgb(155, 112, 255);
+  }
+  60% {
+    background-color: rgb(155, 112, 255);
+  }
+  80% {
+    background-color: rgb(114, 112, 255);
+  }
+  100% {
+    background-color: rgb(112, 191, 255);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(37, 37, 37);
+}
+
+html {
+  font-size: 62.5%;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.animation-container {
+  width: 7rem;
+  height: 7rem;
+  position: relative;
+  -webkit-animation: rotate infinite 4s;
+          animation: rotate infinite 4s;
+}
+
+.dot {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgb(112, 191, 255);
+  border-radius: 50%;
+  position: absolute;
+}
+.dot:nth-child(1) {
+  left: 0;
+  top: 0;
+  -webkit-animation: color-transition infinite 3s;
+          animation: color-transition infinite 3s;
+}
+.dot:nth-child(2) {
+  right: 0;
+  top: 0;
+  -webkit-animation: color-transition infinite 3s 0.2s;
+          animation: color-transition infinite 3s 0.2s;
+}
+.dot:nth-child(3) {
+  left: 0;
+  bottom: 0;
+  -webkit-animation: color-transition infinite 3s 0.4s;
+          animation: color-transition infinite 3s 0.4s;
+}
+.dot:nth-child(4) {
+  right: 0;
+  bottom: 0;
+  -webkit-animation: color-transition infinite 3s 0.6s;
+          animation: color-transition infinite 3s 0.6s;
+}/*# sourceMappingURL=main.css.map */
